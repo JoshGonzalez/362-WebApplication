@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-d$_%0k2jxgu#shc$5h3jpvm&1=p3_#1@ie3v(csbtfo86xy09g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://campoos-connect.herokuapp.com/']
 
 
 # Application definition
