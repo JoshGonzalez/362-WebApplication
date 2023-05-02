@@ -28,15 +28,6 @@
                 <img src="{% static 'blog/images/profile-pic.png'%}">
             </div>
         </div>
-        <div class="nav-right">
-            <div class="search-box">
-                <img src="{%static 'blog/images/search.png'%}">
-                <input type="text" placeholder="Search">
-            </div>
-            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-                <img src="{%static 'blog/images/profile-pic.png'%}">
-            </div>
-        </div>
         <!------settings page-------->
         <div class="settings-menu">
             <div id="dark-btn">
@@ -53,7 +44,7 @@
                 <hr>
                 <div class="settings-links">
                     <img src="{%static 'blog/images/setting.png'%}" class="settings-icon">
-                    <a href="profile.html">Profile Settings <img src="images/arrow.png" width="9px" height="15px"></a>
+                    <a href="profile.html">Profile Settings <img src="{% static 'images/arrow.png'%}" width="9px" height="15px"></a>
                 </div>
                 
                 <div class="settings-links">

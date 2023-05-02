@@ -8,6 +8,14 @@
     <title>ChatRoom</title>
     <link rel="stylesheet" href="{%static 'blog/css/style.css' %}">
 </head>
+<style>
+    body{
+        background-image: url("{%static 'blog/images/csufbg.jpeg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+    }
+</style>
 <body>
     <nav>
         <div class="nav-left">
@@ -44,7 +52,7 @@
                 <hr>
                 <div class="settings-links">
                     <img src="{% static 'blog/images/setting.png'%}" class="settings-icon">
-                    <a href="profile.html">Profile Settings <img src="{% static 'blog/images/arrow.png'%}" width="9px" height="15px"></a>
+                    <a href="{% url 'profile'%}">Profile Settings <img src="{% static 'blog/images/arrow.png'%}" width="9px" height="15px"></a>
                 </div>
                 
                 <div class="settings-links">
@@ -55,9 +63,19 @@
             </div>
             
         </div>
-
-
     </nav>
+    <center> 
+        <div class="box">
+            <img src="{% static 'blog/images/profile-pic.png'%}">
+            <input type="file" name="" id="file" accept="image/*">
+            <label for="file">Change Photo</label>
+            <input type="text" name="" placeholder="User Name">
+            <input type="email" name="" placeholder="Email">
+            <input type="text" name="" placeholder="Phone Number">
+            <button style="float: left;margin:10px 0 0 18.2%;">Cancel</button>
+            <button style="float: right;margin:10px 18.2% 0 0;">Save Changes</button>
+        </div>
+    </center> 
 <script src="{%static 'blog/js/script.js'%}"></script>
 </body>
 </html>
