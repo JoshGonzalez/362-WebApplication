@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatRoom</title>
+    <link rel="stylesheet" href="{%static 'blog/css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="{% static 'blog/images/logo.png' %}" class="logo">
+            <ul>
+                <li><a href="{% url 'home'%}"><img src="{% static 'blog/images/home.png'%}" alt="No home image found"></a></li>
+                <li><a href="{% url 'chatroom'%}"><img src="{% static 'blog/images/chatroom.png'%}"alt="No chatroom image found"></a></li>
+                <li><a href="{% url 'profile'%}"><img src="{% static 'blog/images/profile.png'%}"alt="No profile image found"></a></li>
+                <li><a href="{% url 'about'%}"><img src="{% static 'blog/images/about.png' %}" alt="About"></a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="{% static 'blog/images/search.png'%}">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="{% static 'blog/images/profile-pic.png'%}">
+            </div>
+        </div>
+        <!------settings page-------->
+        <div class="settings-menu">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-inner">
+                <div class="user-profile">
+                    <img src="{% static 'blog/images/profile-pic.png'%}">
+                    <div>
+                        <p>Josh Gonzalez</p>
+                        <a href="#">Manage profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-links">
+                    <img src="{% static 'blog/images/setting.png'%}" class="settings-icon">
+                    <a href="profile.html">Profile Settings <img src="{% static 'blog/images/arrow.png'%}" width="9px" height="15px"></a>
+                </div>
+                
+                <div class="settings-links">
+                    <img src="{% static 'blog/images/logout.png'%}" class="settings-icon">
+                    <a href="#">Logout <img src="{% static 'blog/images/arrow.png'%}" width="9px" height="15px"></a>
+                </div>
+
+            </div>
+            
+        </div>
+
+
+    </nav>
+<script src="{%static 'blog/js/script.js'%}"></script>
+</body>
+</html>
